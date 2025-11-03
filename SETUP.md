@@ -51,7 +51,7 @@ OPENAI_MODEL=gpt-5-nano
 **Using ClickHouse Cloud:**
 
 ```bash
-SITE_ADDRESS=":8001" docker compose --env-file .env.environment-a -f docker-compose.yml up -d
+docker compose --env-file .env.environment-a -f docker-compose.yml up -d
 ```
 
 ### 4. Access HouseWatch
