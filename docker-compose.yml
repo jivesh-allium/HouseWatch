@@ -18,6 +18,8 @@ services:
       AWS_ACCESS_KEY_ID: $AWS_ACCESS_KEY_ID
       AWS_SECRET_ACCESS_KEY: $AWS_SECRET_ACCESS_KEY
       AWS_DEFAULT_REGION: $AWS_DEFAULT_REGION
+      OPENAI_API_KEY: $OPENAI_API_KEY
+      OPENAI_MODEL: $OPENAI_MODEL
 
     command:
       - bash
@@ -33,7 +35,6 @@ services:
       - db
       - redis
       - rabbitmq
-      - clickhouse
 
   web:
     build: ./frontend
@@ -52,7 +53,6 @@ services:
       - db
       - redis
       - rabbitmq
-      - clickhouse
 
   redis:
     image: redis:6.2.7-alpine

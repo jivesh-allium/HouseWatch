@@ -1,7 +1,10 @@
-FROM alpine:latest
+FROM node:20-alpine
 
 WORKDIR /frontend
 
+# Install serve to serve the static files
+RUN npm install -g serve
+
 COPY build/ build/
 
-CMD ["echo", "Serve the files from /frontend/build, don't run this container directly"]
+CMD ["serve", "-s", "build", "-l", "3000"]
