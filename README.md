@@ -7,6 +7,7 @@
   <img src="./overview.png">
 </p>
 
+See [SETUP.md](SETUP.md) for more information on how to setup and deploy HouseWatch within Allium.
 
 ## 📈 Open source tool for monitoring and managing ClickHouse clusters
 
